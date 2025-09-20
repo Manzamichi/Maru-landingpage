@@ -1,35 +1,43 @@
 .p-menubar {
   justify-content: space-between;
+  display: flex;
   background-color: #5A850F;
   color: white;
-  width: 1920px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; 
+  letter-spacing: 0.1px;
+  width: 100%;
   height: 112px;
   flex-shrink: 0;
   gap: 50px;
-  padding: 0 255px;
+  padding: 0 3rem;
+  box-sizing: border-box;
 }
 
-.p-menubar-root-list {
+:host ::ng-deep .p-menubar-root-list {
   margin-left: auto;
 }
 
-.p-menuitem-link {
+:host ::ng-deep .p-menuitem-link {
   color: white;
   margin: 0 20px;
 }
 
-input[pInputText] {
-display: flex;
-width: 156px;
-height: 44px;
-padding: 0 35px;
-justify-content: center;
-align-items: center;
-gap: 4px;
-color: black;
-background: #FFFFFF;
-border-radius: 13px;
-box-shadow: 0 4px 8px 0 rgba(101, 92, 128, 0.30);
+:host ::ng-deep input[pInputText] {
+  display: flex;
+  width: 156px;
+  height: 44px;
+  padding: 0 10px;
+  justify-content: right;
+  align-items: center;
+  gap: 4px;
+  color: black;
+  background: #FFFFFF;
+  border-radius: 13px;
+  box-shadow: 0 4px 8px 0 rgba(101, 92, 128, 0.30);
 }
 
 ::ng-deep .p-menubar .p-menubar-root-list {
