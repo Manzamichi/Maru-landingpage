@@ -1,0 +1,39 @@
+.p-menubar {
+  justify-content: space-between;
+  background-color: #5A850F;
+  color: white;
+  width: 1920px;
+  height: 112px;
+  flex-shrink: 0;
+  gap: 50px;
+  padding: 0 255px;
+}
+
+.p-menubar-root-list {
+  margin-left: auto;
+}
+
+.p-menuitem-link {
+  color: white;
+  margin: 0 20px;
+}
+
+input[pInputText] {
+display: flex;
+width: 156px;
+height: 44px;
+padding: 0 35px;
+justify-content: center;
+align-items: center;
+gap: 4px;
+color: black;
+background: #FFFFFF;
+border-radius: 13px;
+box-shadow: 0 4px 8px 0 rgba(101, 92, 128, 0.30);
+}
+
+::ng-deep .p-menubar .p-menubar-root-list {
+  display: flex;
+  gap: 35px;
+  align-items: right;
+}
