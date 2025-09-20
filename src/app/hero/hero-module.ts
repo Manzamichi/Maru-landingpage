@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { Hero } from './hero/hero';
 
 
 @NgModule({
-  declarations: [],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    Hero
+  ],
+  exports: [Hero]
 })
 export class HeroModule { }
