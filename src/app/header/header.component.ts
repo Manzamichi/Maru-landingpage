@@ -4,7 +4,6 @@ import { BadgeModule } from 'primeng/badge';
 import { AvatarModule } from 'primeng/avatar';
 import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
-import { Ripple } from 'primeng/ripple';
 import { MenuItem } from 'primeng/api';
 import { RouterModule } from '@angular/router';
 
@@ -19,7 +18,6 @@ import { RouterModule } from '@angular/router';
     AvatarModule,
     InputTextModule,
     CommonModule,
-    Ripple,
     RouterModule
   ]
 })
