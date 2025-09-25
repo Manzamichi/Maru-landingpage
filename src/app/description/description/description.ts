@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-description',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './description.html',
+  styleUrl: './description.scss'
+})
+export class Description {
+  reviewers = [
+    { avatar: '/assets/images/placeholder.png' },
+    { image: 'bob.jpg' },
+    { image: 'catherine.jpg' }
+  ];
+
+  dietCards = [
+    { title: "REACTIVAR TU METABOLISMO", description: "Un metabolismo rápido <br> significa que quemas más <br> calorías, ¡incluso en reposo!" },
+    { title: "BALANCEAR TUS HORMONAS", description: "Regular tus niveles hormonales, <br> especialmente si estás <br> experimentando la <br> perimenopausia o menopausia." },
+    { title: "ENSEÑAR A TU CUERPO A SER EFICIENTE", description: "Tu cuerpo aprenderá a usar las <br> calorías de manera óptima, sabiendo <br> cuándo almacenar y cuándo quemar." }
+  ]
+}

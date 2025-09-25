@@ -1,0 +1,250 @@
+.description-section {
+  display: flex;
+  position: relative;
+  padding: 0% 25% 0% 25%; /* top right bottom left */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 40rem;
+  gap: 0rem;
+  background-color: teal;
+}
+
+.diet-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: white;
+  background-image: linear-gradient(rgba(124, 181, 24, 0.55), rgba(123, 181, 24, 0.55)), url(/assets/images/diet.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  div{
+    z-index: 2;
+  }
+  .cta-button {
+    background: #FAF9F6;
+    color: #7CB518;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 10rem;
+    padding: 0 30px;
+    gap: 4px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px 0 rgba(101, 92, 128, 0.30);
+    border-radius: 13px;
+  }
+}
+
+.image-column {
+  position: relative;
+  flex: 0 0 45%;
+  max-width: 45%;
+  margin: 0;
+}
+
+.main-image {
+  width: 20rem;
+  display: block;
+  object-fit: contain;
+  padding: 0 0 0 0; /* top right bottom left */
+  position: relative;
+  
+}
+
+.reviews-overlay {
+  position: absolute;
+  bottom: 20px; // Adjust position from the bottom
+  left: 20px; // Adjust position from the left
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 15px; // top/bottom left/right
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.reviews-title {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.review-bubbles {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bubble {
+  width: 25px;
+  height: 25px;
+  background-color: #ddd; // Placeholder color for bubbles
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.bubble:nth-child(2) {
+  margin-left: -10px; // Overlap bubbles
+}
+.bubble:nth-child(3) {
+  margin-left: -10px; // Overlap bubbles
+}
+
+
+.review-count {
+  font-weight: bold;
+  color: #333;
+  margin-left: 10px;
+}
+
+.title-centered h2 {
+  color: #7CB518;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+span {
+  color: #7CB518;
+  font-weight: bold;
+}
+
+.cta-button {
+  display: inline-flex;
+  height: 3rem;
+  width: 10rem;
+  padding: 0 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  border-color: transparent;
+  background: var(--Brand, #7CB518);
+  box-shadow: 0 4px 8px 0 rgba(101, 92, 128, 0.30);
+  color: white;
+  margin: 2rem 0 0 0; /* top right bottom left */
+  align-self: flex-start;
+  font-size: 1rem;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+}
+
+.text-content-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.title-centered p, .description-content-text p {
+    text-align: justify !important;
+    margin: 0;
+}
+
+.parenthesis {
+  color: white;
+  font-weight: bold;
+}
+
+.diet-title h1{
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 700;
+  line-height: 120%;
+  letter-spacing: -2.88px;
+  text-transform: uppercase;
+}
+
+.first-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.highlighted {
+  font-size: 1.5rem;
+  font-style: normal;
+  margin-top: -20px;
+  text-align: center;
+  border-radius: 2rem;
+  background-color: white;
+  color: #7CB518;
+  font-weight: 400;
+  line-height: 140%; /* 33.6px */
+  letter-spacing: 0.12px;
+  flex-shrink: 0;
+}
+
+.diet-description {
+  background-color: transparent;
+  margin-left: 20px;
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 140%; /* 33.6px */
+  letter-spacing: 0.12px;
+}
+
+.diet-cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row;
+}
+
+.diet-card {
+  background-color: white;
+  color: #7CB518;
+  padding: 3rem 0 0 0; /* top right bottom left */
+  border-radius: 13px;
+  flex: 1 1 300px;
+  box-shadow: 0 4px 12.3px 1px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  text-align: center;
+  width: auto;
+  height: auto;
+  flex-grow: 0;
+  h4 {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 30.8px */
+    letter-spacing: 0.11px;
+  }
+  p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+    letter-spacing: 0.08px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .description-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  .image-column, .text-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
