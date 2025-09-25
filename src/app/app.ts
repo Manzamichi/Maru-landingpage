@@ -2,11 +2,8 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderModule } from '././header/header.module';
 import { Hero } from "./hero/hero/hero";
-<<<<<<< HEAD
-=======
 import { Features } from "./features/features/features";
 import { Description } from "./description/description/description";
->>>>>>> f081a51 (Configuracion de la descripcion del programa)
 
 
 @Component({
