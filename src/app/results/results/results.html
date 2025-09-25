@@ -1,0 +1,12 @@
+<div class="results-sections">
+    <div class="title">
+        <h2>Transformación Real y Duradera</h2>
+        <p>¡Nuestro resultados hablan por sí mismos! Todas nuestras fotos de antes y después son de clientes reales.</p>
+    </div>
+    <div class="results-gallery">
+        <div class="result-item" *ngFor="let result of Results">
+            <img [src]="result.image" [alt]="result.alt">
+            <p class="result-description">{{result.description}}</p>
+        </div>
+    </div>
+</div>
