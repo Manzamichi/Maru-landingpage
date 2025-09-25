@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 export class Description {
   reviewers = [
-    { avatar: '/assets/images/placeholder.png' },
-    { image: 'bob.jpg' },
-    { image: 'catherine.jpg' }
+    { avatar: '/images/placeholder.png' },
+    { image: '/images/placeholder.png' },
+    { image: '/images/placeholder.png' }
   ];
 
   dietCards = [
