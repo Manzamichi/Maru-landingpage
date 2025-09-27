@@ -11,8 +11,8 @@ import { CommonModule } from '@angular/common';
 export class Description {
   reviewers = [
     { avatar: '/images/placeholder.png' },
-    { image: '/images/placeholder.png' },
-    { image: '/images/placeholder.png' }
+    { avatar: '/images/placeholder.png' },
+    { avatar: '/images/placeholder.png' }
   ];
 
   dietCards = [

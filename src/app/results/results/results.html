@@ -1,0 +1,24 @@
+<div class="results-sections">
+    <div class="title">
+        <h2>Transformación Real y Duradera</h2>
+        <p>¡Nuestro resultados hablan por sí mismos! Todas nuestras fotos de antes y después son de clientes reales.</p>
+    </div>
+    <div class="results-gallery">
+        <div class="result-item" *ngFor="let result of Results">
+            <img [src]="result.image" [alt]="result.alt"> 
+            <div class="info-card">
+                <p class="result-description">{{result.description}}</p>
+                <button class="cta-button-small">Conoce más</button>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="image-compare-container" (mousemove)="onMouseMove($event)" (mouseup)="stopDragging()" (mouseleave)="stopDragging()">
+        <img [src]="leftImage" alt="Antes" class="image-before">
+
+        <div class="image-after-wrapper" [style.width.px]="sliderPosition">
+            <img [src]="rightImage" alt="Después" class="image-after">
+        </div>
+
+        <div class="slider-handle" [style.left.px]="sliderPosition" (mousedown)="startDragging($event)"></div>
+    </div> -->
+</div>
