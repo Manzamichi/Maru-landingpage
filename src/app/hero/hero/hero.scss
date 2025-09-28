@@ -66,6 +66,7 @@ h1 {
     flex-shrink: 0;
     border-radius: 13px;
     background: var(--Brand, #7CB518);
+    border: 0.5px solid var(--Brand, #7CB518);
     box-shadow: 0 4px 8px 0 rgba(101, 92, 128, 0.30);
     color: white;
 }
