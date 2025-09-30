@@ -6,11 +6,12 @@ import { Features } from "./features/features/features";
 import { Description } from "./description/description/description";
 import { Results } from "./results/results/results";
 import { MoreInformation } from "./more-information/more-information/more-information";
+import { ProgramDetails } from './program-details/program-details/program-details';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderModule, Hero, Features, Description, Results, MoreInformation],
+  imports: [RouterOutlet, HeaderModule, Hero, Features, Description, Results, MoreInformation, ProgramDetails],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
