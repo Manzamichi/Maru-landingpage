@@ -1,0 +1,18 @@
+<div class="program-details-section">
+    <div class="title">
+        <h1>¿QUÉ INCLUYE NUESTRO PROGRAMA?</h1>
+        <p>Queremos que te sientas completamente apoyada y <br> acompañada en cada paso de tu transformación</p>
+    </div>
+    <div class="what-includes">
+        <div class="feature-list">
+            <div class="feature-item" *ngFor="let feature of features">
+                <div class="circle" [ngClass]="{'primary-circle': feature.isPrimary, 'secondary-circle': !feature.isPrimary}"></div>
+    
+                <div class="text-label" [ngClass]="{'primary-label': feature.isPrimary, 'secondary-label': !feature.isPrimary}">
+                    {{ feature.text }}
+                </div>
+            </div>            
+        </div>
+    </div>
+    <button class="cta-button">Conocer más</button>
+</div>
