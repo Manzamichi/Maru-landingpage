@@ -1,0 +1,125 @@
+.form-section {
+    background: var(--Accent, #FAF9F6);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    min-height: 500px;
+}
+
+.form {
+    background-color: #5A850F;
+    padding: 40px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 30px;
+    width: 700px;
+    z-index: 1;
+    margin-right: 0;
+    align-items: center;
+
+    h2 {
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins, sans-serif;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 113%; /* 72.32px */
+        letter-spacing: -1.92px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    label {
+        color: #FFF;
+        font-family: Poppins, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 55%;
+        margin-bottom: 5px;
+    }
+
+    input {
+        border-radius: 24.5px;
+        background: #F6F7FA;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        border-color: transparent;
+        font-family: Poppins, sans-serif;
+
+    }
+
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.required {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Campos de ancho completo (Nombre) */
+.form-group-full {
+    width: 100%;
+}
+
+/* Fila de 2 Columnas (Número y Email) */
+.form-group-row {
+    display: flex;
+    gap: 20px; /* Espacio entre los dos campos (Número y Email) */
+    width: 100%;
+}
+
+.form-group {
+    flex: 1; /* Permite que cada campo ocupe la mitad del espacio */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo de los Inputs (PrimeNG) */
+input.p-inputtext {
+    border-radius: 24.5px;
+    background: #F6F7FA;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    border: none; /* Usa border en lugar de border-color: transparent */
+    padding: 1rem; /* Ajusta el padding para una buena altura */
+    width: 100%; /* El input ocupa todo el ancho del form-group */
+}
+
+/* Estilo del Botón de Enviar (PrimeNG) */
+.submit-button {
+    /* Usa la clase .p-button para un estilo más directo */
+    background: #EAF45D; /* Amarillo claro */
+    color: var(--Brand, #7CB518);
+    border: none;
+    border-radius: 24.5px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.main-image {
+    left: 0;
+    bottom: 0;
+    width: 650px;
+    position: absolute;
+    flex: 0 0 400px;
+    max-width: 45%;
+    margin: 0;
+    height: auto;
+    max-height: 600px;
+    z-index: 2;
+
+}
