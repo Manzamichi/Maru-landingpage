@@ -4,7 +4,6 @@ import { BadgeModule } from 'primeng/badge';
 import { AvatarModule } from 'primeng/avatar';
 import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
-import { Ripple } from 'primeng/ripple';
 import { MenuItem } from 'primeng/api';
 import { RouterModule } from '@angular/router';
 
@@ -19,7 +18,6 @@ import { RouterModule } from '@angular/router';
     AvatarModule,
     InputTextModule,
     CommonModule,
-    Ripple,
     RouterModule
   ]
 })
@@ -32,9 +30,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.items = [
       { label: 'Home', items: [
-        { label: 'Submenu 1', icon: 'pi pi-fw pi-plus' },
-        { label: 'Submenu 2', icon: 'pi pi-fw pi-plus' },
-        { label: 'Submenu 3', icon: 'pi pi-fw pi-plus' }
+        { label: 'Submenu 1'},
+        { label: 'Submenu 2' },
+        { label: 'Submenu 3 '}
       ] },
       { label: 'About' },
       { label: 'Services' },
