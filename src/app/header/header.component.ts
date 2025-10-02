@@ -30,9 +30,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.items = [
       { label: 'Home', items: [
-        { label: 'Submenu 1', icon: 'pi pi-fw pi-plus' },
-        { label: 'Submenu 2', icon: 'pi pi-fw pi-plus' },
-        { label: 'Submenu 3', icon: 'pi pi-fw pi-plus' }
+        { label: 'Submenu 1'},
+        { label: 'Submenu 2' },
+        { label: 'Submenu 3 '}
       ] },
       { label: 'About' },
       { label: 'Services' },
