@@ -1,6 +1,7 @@
 .more-information-section {
     background-size: cover;
     background-position: center;
+    font-family: Poppins, sans-serif;
     height: 50rem;
     width: 100%;
     flex-shrink: 0;
@@ -53,6 +54,7 @@ h1 {
         background: #FFF;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         color: #7CB518;
+        cursor: pointer;
     }
 
     .secondary-button {
@@ -68,6 +70,7 @@ h1 {
         background: var(--Brand, #7CB518);
         box-shadow: 0 4px 8px 0 rgba(101, 92, 128, 0.30);
         color: white;
+        cursor: pointer;
     }
 }
 

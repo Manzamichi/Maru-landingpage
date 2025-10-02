@@ -86,7 +86,6 @@
     flex-direction: column;
 }
 
-/* Estilo de los Inputs (PrimeNG) */
 input.p-inputtext {
     border-radius: 24.5px;
     background: #F6F7FA;
@@ -96,10 +95,8 @@ input.p-inputtext {
     width: 100%; /* El input ocupa todo el ancho del form-group */
 }
 
-/* Estilo del Botón de Enviar (PrimeNG) */
 .submit-button {
-    /* Usa la clase .p-button para un estilo más directo */
-    background: #EAF45D; /* Amarillo claro */
+    background: #EAF45D;
     color: var(--Brand, #7CB518);
     border: none;
     border-radius: 24.5px;
@@ -108,6 +105,7 @@ input.p-inputtext {
     font-weight: 700;
     width: 100%;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .main-image {
