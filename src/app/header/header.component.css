@@ -1,7 +1,7 @@
 .p-menubar {
   justify-content: space-between;
-  display: flex;
   background-color: #5A850F;
+  display: flex;
   color: white;
   font-family: 'Inter', sans-serif;
   font-size: 20px;
@@ -12,13 +12,8 @@
   width: 100%;
   height: 112px;
   flex-shrink: 0;
-  gap: 50px;
-  padding: 0 3rem;
+  padding: 0 3rem; 
   box-sizing: border-box;
-}
-
-:host ::ng-deep .p-menubar-root-list {
-  margin-left: auto;
 }
 
 :host ::ng-deep .p-menuitem-link {
@@ -31,17 +26,19 @@
   width: 156px;
   height: 44px;
   padding: 0 10px;
-  justify-content: right;
-  align-items: center;
-  gap: 4px;
   color: black;
-  background: #FFFFFF;
+  background: #ffff;
   border-radius: 13px;
   box-shadow: 0 4px 8px 0 rgba(101, 92, 128, 0.30);
 }
 
+:host ::ng-deep ::placeholder{
+  color: gray;
+}
+
 ::ng-deep .p-menubar .p-menubar-root-list {
   display: flex;
+  margin-left: auto;
   gap: 35px;
-  align-items: right;
+  align-items: center;
 }
