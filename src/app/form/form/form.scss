@@ -1,25 +1,29 @@
 .form-section {
     background: var(--Accent, #FAF9F6);
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     width: 100%;
     position: relative;
-    padding: 0;
+    padding: 10rem;
     min-height: 500px;
+    z-index: 1;
+
+    .green-background {
+        display: grid;
+        background: #5A850F;
+        width: 100%;
+        grid-template-columns: 30% 70%;
+    }
 }
 
 .form {
-    background-color: #5A850F;
     padding: 40px;
-    display: flex;
     flex: 1;
-    flex-direction: column;
     gap: 30px;
-    width: 700px;
-    z-index: 1;
-    margin-right: 0;
-    align-items: center;
+    max-width: 70rem;
+    z-index: 6;
 
     h2 {
         color: #FFF;
@@ -31,7 +35,7 @@
         line-height: 113%; /* 72.32px */
         letter-spacing: -1.92px;
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin-bottom: 20px;    
     }
 
     label {
@@ -50,17 +54,19 @@
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
         border-color: transparent;
         font-family: Poppins, sans-serif;
-
     }
 
 }
 
-.contact-form {
+form {
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    width: 100%;
-    max-width: 600px;
+    margin-left: 25%;
+    margin-right:25%;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 50%;
+    gap: 60px; 
 }
 
 .required {
@@ -111,13 +117,13 @@ input.p-inputtext {
 .main-image {
     left: 0;
     bottom: 0;
-    width: 650px;
     position: absolute;
     flex: 0 0 400px;
-    max-width: 45%;
     margin: 0;
-    height: auto;
-    max-height: 600px;
-    z-index: 2;
+    z-index: 6;
+}
 
+.image {
+    position: relative;
+    flex: 1;
 }
