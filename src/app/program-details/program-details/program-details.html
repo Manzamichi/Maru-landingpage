@@ -6,8 +6,9 @@
     <div class="what-includes">
         <div class="feature-list">
             <div class="feature-item" *ngFor="let feature of features">
-                <div class="circle" [ngClass]="{'primary-circle': feature.isPrimary, 'secondary-circle': !feature.isPrimary}"></div>
-    
+                <div class="circle" [ngClass]="{'primary-circle': feature.isPrimary, 'secondary-circle': !feature.isPrimary}">
+                    <lucide-angular [name]="feature.iconName" [ngClass]="{'primary-label': feature.isPrimary, 'secondary-label': !feature.isPrimary}" [size]="48"></lucide-angular>
+                </div>
                 <div class="text-label" [ngClass]="{'primary-label': feature.isPrimary, 'secondary-label': !feature.isPrimary}">
                     {{ feature.text }}
                 </div>

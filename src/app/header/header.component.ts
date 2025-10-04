@@ -26,18 +26,20 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   items: MenuItem[] | undefined;
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start'});
+    }
+  }
 
   ngOnInit() {
     this.items = [
-      { label: 'Home', items: [
-        { label: 'Submenu 1'},
-        { label: 'Submenu 2' },
-        { label: 'Submenu 3 '}
-      ] },
-      { label: 'About' },
-      { label: 'Services' },
-      { label: 'Testimonials'},
-      { label: 'Blog' }
+      { label: 'Home', command: () => this.scrollToSection('hero-section')},
+      { label: 'About', command: () => this.scrollToSection('about-section') },
+      { label: 'Services', command: () => this.scrollToSection('services-section') },
+      { label: 'Testimonials', command: () => this.scrollToSection('testimonials-section')},
+      { label: 'Blog', command: () => this.scrollToSection('blog-section') }
     ];
   }
 
