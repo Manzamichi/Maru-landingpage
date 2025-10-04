@@ -13,6 +13,28 @@
     align-items: center;
 }
 
+lucide-icon {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.Zap {
+    color: #9810fa;
+}
+
+.Heart {
+    color: #fa2c37;
+}
+
+.Target {
+    color: #165dfb;
+}
+
+.Smartphone {
+    color: #00a63e;
+}
+
 .title-centered {
     text-align: center;
     font-size: 36px;
@@ -49,15 +71,22 @@ h2 {
     color: #7CB518;
 }
 
+.circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    padding-bottom: 2rem;
+}
+
 .circles-containers {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-  max-width: 900px;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 2rem;
   flex-wrap: wrap;
-  position: center;
-  margin: 0 auto;
-  margin-top: 5rem;
+  width: 100%;
 }
 
 .cta-button {
@@ -80,12 +109,4 @@ h2 {
     font-family: Poppins, sans-serif;
     font-weight: 500;
     cursor: pointer;
-}
-
-img {
-    width: 5rem;
-    height: 5rem;
-    margin-bottom: 1rem;
-    object-fit: cover;
-    border-radius: 50%;
 }
