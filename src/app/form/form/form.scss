@@ -111,6 +111,15 @@ input.p-inputtext {
     width: 100%;
     margin-top: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #dce557;
+}
+
+.submit-button:active {
+    transform: translateY(2px);
 }
 
 .main-image {
