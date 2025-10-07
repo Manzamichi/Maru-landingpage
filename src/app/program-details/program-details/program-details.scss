@@ -52,7 +52,19 @@ p {
     line-height: 140%; /* 44.8px */
     letter-spacing: 4.16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+button:active {
+  transform: translateY(2px);
+}
+
+button:hover {
+  background-color: #5f8d26;
+  border: 0.5px solid var(#5f8d26);
+}
+
+
 
 .feature-list {
   display: flex;
