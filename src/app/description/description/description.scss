@@ -1,9 +1,9 @@
 .description-section {
   display: grid;
   background-color: var(--Accent, #FAF9F6);
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   position: relative;
-  padding: 0% 25% 0% 25%; /* top right bottom left */
+  padding: 0% 20% 0% 20%; /* top right bottom left */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -11,27 +11,30 @@
   margin: 0 auto;
   width: 100%;
   height: auto;
-  gap: 0rem;
+  gap: 1rem;
   flex-shrink: 1;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .diet-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: Poppins, sans-serif;
-  gap: 1rem;
-  color: white;
-  background-image: linear-gradient(rgba(124, 181, 24, 0.55), rgba(123, 181, 24, 0.55)), url(/images/diet.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  div{
-    z-index: 2;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins, sans-serif;
+    gap: 1rem;
+    color: white;
+    background-image: linear-gradient(rgba(124, 181, 24, 0.55), rgba(123, 181, 24, 0.55)), url(/images/diet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    div{
+      z-index: 2;
+    }
+
   .cta-button {
     background: #FAF9F6;
     color: #7CB518;
@@ -52,7 +55,7 @@
   .cta-button:hover {
     background-color: #ece8e8;
     border: 0.5px solid var(#5f8d26);
-}
+  }
 }
 
 .image-column {
@@ -118,9 +121,11 @@
 
 .title-centered h2 {
   color: #7CB518;
-  font-size: 4rem;
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: bold;
   margin-bottom: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 span {
@@ -150,23 +155,23 @@ span {
 }
 
 .cta-button:hover {
-    background-color: #5f8d26;
-    border: 0.5px solid var(#5f8d26);
+  background-color: #5f8d26;
+  border: 0.5px solid var(#5f8d26);
 }
 
 button:active {
-    transform: translateY(2px);
+  transform: translateY(2px);
 }
 
 .text-content-column {
-    flex: 0 1 50%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-    z-index: 5;
+  flex: 0 1 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
 }
 
 .text-content-column p {
@@ -174,8 +179,8 @@ button:active {
 }
 
 .title-centered p, .description-content-text p {
-    text-align: justify !important;
-    margin: 0;
+  text-align: justify !important;
+  margin: 0;
 }
 
 .parenthesis {
@@ -184,7 +189,7 @@ button:active {
 }
 
 .diet-title h1{
-  font-size: 5rem;
+  font-size: clamp(3rem, 5vw, 5rem);
   font-weight: bold;
   margin: 700;
   line-height: 120%;
@@ -198,10 +203,11 @@ button:active {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .highlighted {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-style: normal;
   margin-top: -20px;
   text-align: center;
@@ -217,7 +223,7 @@ button:active {
   background-color: transparent;
   margin-left: 20px;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 400;
   line-height: 140%; /* 33.6px */
   letter-spacing: 0.12px;
@@ -233,17 +239,18 @@ button:active {
 }
 
 .diet-card {
-  background-color: white;
-  color: #7CB518;
-  padding: 3rem 0 0 0; /* top right bottom left */
-  border-radius: 13px;
-  flex: 1 1 300px;
-  box-shadow: 0 4px 12.3px 1px rgba(0, 0, 0, 0.25);
-  box-sizing: border-box;
-  text-align: center;
-  width: auto;
-  height: auto;
-  flex-grow: 0;
+    background-color: white;
+    color: #7CB518;
+    padding: 1rem;
+    border-radius: 13px;
+    flex: 1 1 300px;
+    box-shadow: 0 4px 12.3px 1px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    text-align: center;
+    width: auto;
+    height: auto;
+    flex-grow: 0;
+  
   h4 {
     font-size: 22px;
     font-style: normal;
@@ -251,6 +258,7 @@ button:active {
     line-height: 140%; /* 30.8px */
     letter-spacing: 0.11px;
   }
+
   p {
     font-size: 16px;
     font-style: normal;
@@ -263,13 +271,28 @@ button:active {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .description-section {
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
+    grid-template-columns: 1fr; /* Una columna en móviles */
+    padding: 5% 5%; /* Padding más pequeño */
+    gap: 2rem;
   }
-  .image-column, .text-column {
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin-bottom: 30px;
+  
+  .title-centered h2 {
+    font-size: 2.5rem; /* Tamaño más pequeño en móviles */
+    text-align: center; /* Centrar en móviles */
+  }
+  
+  .text-content-column {
+    text-align: center; /* Centrar contenido en móviles */
+  }
+  
+  .cta-button {
+    align-self: center; /* Centrar botón en móviles */
+    margin: 1rem auto; /* Margen automático */
+  }
+}
+
+@media (max-width: 480px) {
+  .title-centered h2 {
+    font-size: 2rem; /* Aún más pequeño en móviles muy pequeños */
   }
 }

@@ -24,16 +24,14 @@
 
 .Joanna-information {
     margin-top: 20px;
-    font-size: 2rem;
+    font-size: clamp(1rem, 2vw, 2.5rem);
     line-height: 1.6;
     color: white;
 }
 
 h1 {
-    width: 577px;
-    height: 283px;
     color: #FFF;
-    font-size: 6rem;
+    font-size: clamp(3rem, 5vw, 6rem);
     font-style: normal;
     font-weight: 500;
     line-height: 1.1; 
@@ -95,7 +93,7 @@ p {
     color: #FFF;
     font-family: Inter, sans-serif;
     margin-top: 1rem;
-    font-size: 2.5rem;
+    font-size: clamp(1rem, 2vw, 2.5rem);
     font-style: italic;
     font-weight: 600;
     line-height: 140%; /* 33.6px */
