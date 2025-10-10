@@ -227,3 +227,9 @@ input {
     padding-bottom: 45px;
   }
 }
+
+@media (max-width: 500px) {
+    .wrapper--w780 {
+        min-width: 70vw;
+    }
+}
