@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { InputText } from "primeng/inputtext";
 
 @Component({
   selector: 'app-form',
-  imports: [InputText],
+  imports: [],
   templateUrl: './form.html',
   styleUrl: './form.scss'
 })
