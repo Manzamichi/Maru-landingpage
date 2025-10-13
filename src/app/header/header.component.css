@@ -1,3 +1,10 @@
+.header-section {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
 .p-menubar {
   justify-content: space-between;
   background-color: #5A850F;
@@ -30,42 +37,6 @@
   align-items: center;
 }
 
-::ng-deep .p-menubar-mobile .p-menubar-root-list {
-  top: 100%;
-    background: #5A850F;
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    z-index: 1;
-    right: 0;
-    color: black;
-    max-height: fit-content;
-    row-gap: 1rem;
-} 
-
-::ng-deep .p-menubar-mobile-active .p-menubar-root-list {
-  top: 100%;
-  background: #5A850F;
-  position: absolute;
-  display: none;
-  /* width: 100%; */
-  flex-direction: column;
-  /* left: 0; */
-  z-index: 1;
-  /* padding: var(--p-menubar-submenu-padding); */
-  /*background: var(--p-menubar-submenu-background);*/
-  /* border: 1px solid var(--p-menubar-submenu-border-color);
-  box-shadow: var(--p-menubar-submenu-shadow);
-  border-radius: var(--p-menubar-submenu-border-radius);
-  gap: var(--p-menubar-submenu-gap); */
-  /* background: chocolate; */
-  right: 0;
-  color: black;
-  /* height: 10rem; */
-  max-height: fit-content;
-  row-gap: 1rem;
-}
-
 img {
   max-width: 70%;
   min-width: 20%;
@@ -73,32 +44,16 @@ img {
   flex-shrink: 1;
 }
 
-/* 1. Estilo del Contenedor del Menú Móvil */
-/* Este es el div que aparece al hacer clic */ 
-::ng-deep .p-menubar-mobile {
-  position: absolute;
-  top: 100%; 
-  left: 0;
+:host ::ng-deep .p-menubar-mobile-active .p-menubar-root-list {
+  background-color: #5A850F;
+  opacity: 80%;
+  max-height: fit-content;
+  color: white;
+  justify-content: center;
   width: 100%;
-  background-color: #5A850F; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 100;
+  left: 0;
+  display: flex;
+  flex-direction: column; 
+  padding: 1rem 0; 
 }
 
-/* 2. Estilo de los Ítems Individuales en la Lista Móvil */
-/* PrimeNG usa p-menuitem para cada opción */
-/* ::ng-deep .p-menubar-mobile .p-menuitem {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-} */
-
-/* 3. Estilo del Enlace/Texto del Menú Móvil */
-/* ::ng-deep .p-menubar-mobile .p-menuitem-link {
-  color: white;
-  padding: 15px 20px;
-  display: block;
-} */
-
-/* 4. Estilo al pasar el mouse por encima en modo móvil */
-/* ::ng-deep .p-menubar-mobile .p-menuitem-link:hover {
-  background-color: #7CB518;
-} */
