@@ -38,7 +38,7 @@ lucide-icon {
 .title-centered {
     display: block;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(1.7rem, 2vw, 2.5rem);
     font-style: normal;
     font-weight: 600;
     line-height: 54px; 
@@ -48,7 +48,7 @@ lucide-icon {
 }
 
 .section-paragraph {
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
     font-style: normal;
     font-weight: 400;
     line-height: 27px; 

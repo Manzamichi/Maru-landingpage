@@ -1,27 +1,24 @@
-<div class="form-section">
-    <div class="green-background">
-        <div class="image">
-            <img class="main-image" src="/images/cropped-flexing-woman.png" alt="Mujer flexionando sus músculos">
-        </div>
-        <div class="form">
-            <h2>DEJANOS TUS DATOS</h2>
-            <form class="contact-form">
-                <div class="form-group-full">
-                    <label for="name">Nombre <span class="required">*Obligatorio*</span></label>
-                    <input type="text" pInputText id="name" name="name" class="p-inputtext-lg">
-                </div>
-                <div class="form-group-row">
-                    <div class="form-group">
-                        <label for="phone-number">Número <span class="required">*Obligatorio*</span></label>
-                        <input type="text" pInputText id="phone-number" name="phone-number" class="p-inputtext-lg">
+<div class="page-wrapper font-poppins">
+    <div class="wrapper wrapper--w780">
+        <div class="card card-3">
+            <div class="card-heading"></div>
+            <div class="card-body">
+                <h2 class="title">DEJANOS TUS DATOS</h2>
+                <form method="POST">
+                    <div class="input-group">
+                        <input class="input--style-3" type="text" placeholder="Nombre" name="name">
                     </div>
-                    <div class="form-group">
-                        <label for="email">Correo electrónico <span class="required">*Obligatorio*</span></label>
-                        <input type="email" pInputText id="email" name="email" class="p-inputtext-lg">
+                    <div class="input-group">
+                        <input class="input--style-3" type="text" placeholder="Número" name="phone">
                     </div>
-                </div>
-                <button pButton type="submit" class="submit-button">Enviar</button>
-            </form>
+                    <div class="input-group">
+                        <input class="input--style-3" type="email" placeholder="Correo Electrónico" name="email">
+                    </div>
+                    <div class="p-t-10">
+                        <button class="btn btn--pill btn--green" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
