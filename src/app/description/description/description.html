@@ -20,7 +20,7 @@
                 <p>Sé lo que se siente estar estancada, frustrada y desesperada por no poder bajar de peso, incluso comiendo poco o haciendo más ejercicio. <span>Conozco la fatiga, los antojos, los problemas hormonales, la depresión y esa relación tóxica con la comida.</span></p>
             </div>
             
-            <button class="cta-button">Conocer más</button>
+            <app-button [label]="'Conocer más'" [styles]="'cta-button-description'" [sectionId]="'blog-section'">Conocer más</app-button>
         </div>
     </div>
     <div class="diet-section">
@@ -40,6 +40,6 @@
                 <p [innerHTML]="card.description"></p>
             </div>
         </div>
-        <button class="cta-button">Conocer más</button>
+        <app-button [label]="'Conocer más'" [styles]="'cta-button-description'" [sectionId]="'blog-section'"></app-button>
     </div>
 </div>

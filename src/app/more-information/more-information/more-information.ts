@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule } from "lucide-angular";
 import { CommonModule } from '@angular/common';
+import { Button } from "../../shared/button/button";
 
 interface Icons {
   iconName: string;
@@ -10,8 +11,9 @@ interface Icons {
   selector: 'app-more-information',
   imports: [
     LucideAngularModule,
-    CommonModule
-  ],
+    CommonModule,
+    Button
+],
   templateUrl: './more-information.html',
   styleUrl: './more-information.scss',
   standalone: true
@@ -25,5 +27,4 @@ export class MoreInformation {
     { iconName: 'Star' },
     { iconName: 'Star' }
   ]
-
 }

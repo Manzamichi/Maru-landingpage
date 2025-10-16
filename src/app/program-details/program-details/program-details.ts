@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
+import { Button } from "../../shared/button/button";
 
 interface ProgramFeatures {
   text: string;
@@ -12,8 +13,9 @@ interface ProgramFeatures {
   selector: 'app-program-details',
   imports: [
     CommonModule,
-    LucideAngularModule
-  ],
+    LucideAngularModule,
+    Button
+],
   templateUrl: './program-details.html',
   styleUrl: './program-details.scss',
   standalone: true
@@ -28,5 +30,4 @@ export class ProgramDetails{
     { text: 'Chats Grupales para Responsabilidad y Apoyo', isPrimary: true, iconName: 'Users' },
     { text: 'Educación sobre Nutrición/Macros y Proporciones Personalizadas', isPrimary: false, iconName: 'BookOpen' }
   ];
-
 }
