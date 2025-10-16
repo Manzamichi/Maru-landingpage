@@ -8,7 +8,7 @@
             <img [src]="result.image" [alt]="result.alt"> 
             <div class="info-card">
                 <p class="result-description">{{result.description}}</p>
-                <button class="cta-button-small">Conoce más</button>
+                <app-button [label]="'Conocer más'" [styles]="'cta-button-small'" [sectionId]="'blog-section'"></app-button>
             </div>
         </div>
     </div>

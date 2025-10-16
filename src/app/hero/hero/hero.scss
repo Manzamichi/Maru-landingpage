@@ -38,56 +38,6 @@ h1 {
     letter-spacing: -3.84px;
 }
 
-button {
-    display: flex;
-    height: 4rem;
-    padding: 0 25px;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    border-radius: 13px;
-    border: 0.5px solid var(--Brand, #7CB518);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    flex-shrink: 1;
-}
-
-button:active {
-    transform: translateY(2px);
-}
-
-.primary-btn {
-    background: #FFF;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    color: #7CB518;
-    font-size: 25px;
-}
-
-.primary-btn:hover {
-    background-color: #ece8e8;
-    border: 0.5px solid var(#5f8d26);
-}
-
-.secondary-btn {
-    background: var(--Brand, #7CB518);
-    box-shadow: 0 4px 8px 0 rgba(101, 92, 128, 0.25);
-    color: white;
-    font-size: 25px;
-}
-
-.secondary-btn:hover {
-    background-color: #5f8d26;
-    border: 0.5px solid var(#5f8d26);
-}
-
-.cta-buttons {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 40px;
-    margin-bottom: 40px; 
-    flex-wrap: wrap;
-}
 
 p {
     color: #FFF;

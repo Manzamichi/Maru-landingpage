@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Button } from "../../shared/button/button";
 
 @Component({
   selector: 'app-description',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, Button],
   templateUrl: './description.html',
   styleUrl: './description.scss'
 })
