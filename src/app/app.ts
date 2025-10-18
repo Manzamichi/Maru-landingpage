@@ -8,11 +8,12 @@ import { Results } from "./results/results/results";
 import { MoreInformation } from "./more-information/more-information/more-information";
 import { ProgramDetails } from './program-details/program-details/program-details';
 import { Form } from './form/form/form';
+import { Footer } from "./footer/footer/footer";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderModule, Hero, Features, Description, Results, MoreInformation, ProgramDetails, Form],
+  imports: [RouterOutlet, HeaderModule, Hero, Features, Description, Results, MoreInformation, ProgramDetails, Form, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
