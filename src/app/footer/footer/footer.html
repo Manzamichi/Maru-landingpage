@@ -1,0 +1,11 @@
+<div class="footer-section">
+    <div class="social-links-container">
+        <a *ngFor="let network of socialNetworks"
+           [href]="network.url" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="social-link-item"> <i [class]="network.icon"></i> {{network.name}}
+        </a>
+    </div>
+    <p class="copy-right">© 2024 Maru. All rights reserved.</p>
+</div>
