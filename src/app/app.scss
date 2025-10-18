@@ -2,9 +2,14 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  
 }
 
 body {
-  min-width: 100vw;
+  min-width: 100vh;
+  margin: 0;
+}
+
+app-root, main {
+  margin: 0;
 }
