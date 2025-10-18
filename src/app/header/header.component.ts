@@ -33,6 +33,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('menuBar') menuBar: Menubar | undefined;
 
   isMobile: boolean = false;
+  isDesktop: boolean = false;
   items: CustomMenuItem[] = [];
   originalItems: CustomMenuItem[] = [];
 
@@ -73,6 +74,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       '(max-width: 960px)'
     ]).subscribe(result => {
       this.isMobile = result.matches;
+      this.isDesktop = !result.matches;
       this.filterMenuItems(); 
       this.cd.detectChanges(); 
     });

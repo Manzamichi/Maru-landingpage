@@ -23,6 +23,10 @@
   box-sizing: border-box;
 }
 
+:host ::ng-deep .p-menubar-end {
+  margin-left: 0;
+}
+
 ::ng-deep .p-menubar .p-menubar-root-list {
   display: flex;
   margin-left: auto;
@@ -63,7 +67,7 @@ img {
 .app-button {
     display: inline-flex;
     height: 2.5rem;
-    padding: auto;
+    padding: 1rem 1.5rem;
     justify-content: center;
     align-items: center;
     flex-shrink: 1;
@@ -97,13 +101,23 @@ button:active {
   padding: 0; 
 }
 
-@media (max-width: 1080px) {
+:host ::ng-deep .p-menubar-mobile-active .p-menubar-button {
+  color: transparent;
+}
+
+@media (max-width: 960px) {
     .p-menubar .p-menubar-root-list {
       display: none !important; 
     }
 
     button {
       display: none !important;
+    }
+}
+
+@media (max-width: 960px) { 
+    :host ::ng-deep .p-menubar-end {
+        display: none !important;
     }
 }
 

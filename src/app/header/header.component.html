@@ -3,8 +3,11 @@
     <ng-template pTemplate="start">
       <img src="/images/logo.png" alt="logo">
     </ng-template>
-    <ng-template pTemplate="end">
-      <button  class="app-button" onclick="location.href = 'https://mobile-maru.mastergeek.mx/login'">Nuestra App</button>
-    </ng-template>
+
+    @if (isDesktop) {
+      <ng-template pTemplate="end">
+        <button  class="app-button" onclick="location.href = 'https://mobile-maru.mastergeek.mx/login'">Nuestra <br> App</button>
+      </ng-template>
+    }
   </p-menubar>
 </div>
