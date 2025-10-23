@@ -4,18 +4,25 @@
             <div class="card-heading"></div>
             <div class="card-body">
                 <h2 class="title">DEJANOS TUS DATOS</h2>
-                <form method="POST">
+                
+                <form [formGroup]="formContacto" (ngSubmit)="enviar()">
+                    
                     <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Nombre" name="name" required>
+                        <input class="input--style-3" type="text" placeholder="Nombre" formControlName="nombre" required>
                     </div>
+                    
                     <div class="input-group">
-                        <input class="input--style-3" type="text" pattern="\d{10,10}" placeholder="Número" name="phone" required>
+                        <input class="input--style-3" type="text" pattern="\d{10,10}" placeholder="Número" formControlName="celular" required>
                     </div>
+                    
                     <div class="input-group">
-                        <input class="input--style-3" type="email" placeholder="Correo Electrónico" name="email" required>
+                        <input class="input--style-3" type="email" placeholder="Correo Electrónico" formControlName="email" required>
                     </div>
+                    
                     <div class="p-t-10">
-                        <button class="btn btn--pill btn--green" type="submit">Enviar</button>
+                        <button class="btn btn--pill btn--green" type="submit" [disabled]="formContacto.invalid">
+                          Enviar
+                        </button>
                     </div>
                 </form>
             </div>
