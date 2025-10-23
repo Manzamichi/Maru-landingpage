@@ -215,7 +215,7 @@ input {
     display: block;
     width: 100%;
     padding-top: 400px;
-    background-position: center center;
+    background-position: center top;
     transform: translateX(0px);
     margin-top: -10px;
   }
@@ -228,8 +228,14 @@ input {
   }
 }
 
+@media (max-width: 1300px) {
+    .wrapper--w780 {
+        max-width: 75vw;
+    }
+}
+
 @media (max-width: 500px) {
     .wrapper--w780 {
-        min-width: 70vw;
+        min-width: 75vw;
     }
 }
