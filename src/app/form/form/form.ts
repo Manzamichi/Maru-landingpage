@@ -1,45 +1,63 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { Emailer } from '../../emailer';
+import { ReactiveFormsModule, FormBuilder, Validators, FormGroup, FormsModule } from '@angular/forms';
+import { CorreoService } from '../../services/correo';
 
 
 @Component({
   selector: 'app-form',
   imports: [ 
     ReactiveFormsModule,
+    CommonModule,
+    FormsModule
    ],
   templateUrl: './form.html',
   styleUrl: './form.scss'
 })
 export class Form implements OnInit {
 
-  formContacto!: FormGroup;
+  respuesta: any = {};
+  contactoFormulario!: FormGroup;
 
-  constructor(private readonly fb: FormBuilder, private readonly emailer: Emailer) {}
+  constructor(private readonly fb: FormBuilder, protected readonly correoService: CorreoService) {}
 
   ngOnInit() {
-    this.formContacto = this.fb.group({
-      // Usar 'email' en el TS para la validación de Angular
+    this.contactoFormulario = this.fb.group({
       nombre: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]], 
-      celular: ['', Validators.required] // Usar 'celular' si ese es el campo en PocketBase
-      // Nota: El backend de correo usará 'nombre' y 'email'
+      celular: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]], // Usar 'celular' si ese es el campo en PocketBase
+      mensaje: ['', Validators.required]
     });
   }
 
   enviar() {
-    if (this.formContacto.invalid) return;
+    if (this.contactoFormulario.valid) {
+      let respuesta = [
+        {
+          nombre: 'Nombre',
+          valor: this.respuesta.nombre
+        },
+        {
+          nombre: 'Email',
+          valor: this.respuesta.email
+        },
+        {
+          nombre: 'Celular',
+          valor: this.respuesta.celular
+        },
+      ];
+      this.respuesta.datosFormato = respuesta;
+      let enviarRespuesta = this.respuesta;
+      this.correoService.datosFormulario(enviarRespuesta, 'Contacto');
+      this.contactoFormulario.reset();
+    } else {
+      this.markAllAsTouched();
+    }
+  }
 
-    // ✅ Llama al nuevo método del servicio que usa HttpClient
-    this.emailer.enviarMensaje(this.formContacto.value).subscribe({
-      next: () => {
-        alert('✅ Mensaje enviado correctamente');
-        this.formContacto.reset();
-      },
-      error: (err) => {
-        console.error(err);
-        alert('❌ Ocurrió un error al enviar tu mensaje');
-      }
+  markAllAsTouched() {
+    Object.values(this.contactoFormulario.controls).forEach(control => {
+      control.markAsTouched();
     });
   }
   

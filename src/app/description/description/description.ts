@@ -11,9 +11,9 @@ import { Button } from "../../shared/button/button";
 })
 export class Description {
   reviewers = [
-    { avatar: '/images/placeholder.png' },
-    { avatar: '/images/placeholder.png' },
-    { avatar: '/images/placeholder.png' }
+    { avatar: '' },
+    { avatar: '' },
+    { avatar: '' }
   ];
 
   dietCards = [

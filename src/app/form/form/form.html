@@ -5,22 +5,40 @@
             <div class="card-body">
                 <h2 class="title">DEJANOS TUS DATOS</h2>
                 
-                <form [formGroup]="formContacto" (ngSubmit)="enviar()">
+                <form [formGroup]="contactoFormulario" (ngSubmit)="enviar()">
                     
                     <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Nombre" formControlName="nombre" required>
+                        <input class="input--style-3" type="text" placeholder="Nombre" formControlName="nombre" [(ngModel)]="respuesta.nombre">
+                        <div *ngIf="contactoFormulario.get('nombre')?.invalid && contactoFormulario.get('nombre')?.touched">
+                            <small style="color: red;" *ngIf="contactoFormulario.get('nombre')?.errors?.['required']">El nombre es requerido.</small>
+                        </div>
                     </div>
                     
                     <div class="input-group">
-                        <input class="input--style-3" type="text" pattern="\d{10,10}" placeholder="Número" formControlName="celular" required>
+                        <input class="input--style-3" type="tel" pattern="\d{10,10}" placeholder="Número" formControlName="celular" [(ngModel)]="respuesta.celular">
+                        <div *ngIf="contactoFormulario.get('celular')?.invalid && contactoFormulario.get('celular')?.touched">
+                            <small style="color: red;" *ngIf="contactoFormulario.get('celular')?.errors?.['required']">El número es requerido.</small>
+                            <small style="color: red;" *ngIf="contactoFormulario.get('celular')?.errors?.['pattern']">Debe ser un número de 10 dígitos.</small>
+                        </div>
                     </div>
                     
                     <div class="input-group">
-                        <input class="input--style-3" type="email" placeholder="Correo Electrónico" formControlName="email" required>
+                        <input class="input--style-3" type="email" placeholder="Correo Electrónico" formControlName="email" [(ngModel)]="respuesta.email">
+                        <div *ngIf="contactoFormulario.get('email')?.invalid && contactoFormulario.get('email')?.touched">
+                            <small style="color: red;" *ngIf="contactoFormulario.get('email')?.errors?.['required']">El correo es requerido.</small>
+                            <small style="color: red;" *ngIf="contactoFormulario.get('email')?.errors?.['email']">Correo no válido.</small>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea class="input--style-3" placeholder="Mensaje" formControlName="mensaje" [(ngModel)]="respuesta.mensaje"></textarea>
+                        <div *ngIf="contactoFormulario.get('mensaje')?.invalid && contactoFormulario.get('mensaje')?.touched">
+                            <small style="color: red;" *ngIf="contactoFormulario.get('mensaje')?.errors?.['required']">El mensaje es requerido.</small>
+                        </div>
                     </div>
                     
                     <div class="p-t-10">
-                        <button class="btn btn--pill btn--green" type="submit" [disabled]="formContacto.invalid">
+                        <button class="btn btn--pill btn--green" type="submit" [disabled]="contactoFormulario.invalid">
                           Enviar
                         </button>
                     </div>

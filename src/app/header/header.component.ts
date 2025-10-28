@@ -57,7 +57,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       { label: 'Acerca de', command: () => this.scrollToSection('about-section'), icon: "pi pi-info-circle" },
       { label: 'Servicios', command: () => this.scrollToSection('services-section'), icon: "pi pi-sparkles" },
       { label: 'Resultados', command: () => this.scrollToSection('testimonials-section'), icon: "pi pi-user-edit"},
-      { label: 'Contactanos', command: () => this.scrollToSection('blog-section'), icon: "pi pi-address-book"}
+      { label: 'Contáctanos', command: () => this.scrollToSection('blog-section'), icon: "pi pi-address-book"}
     ];
 
     const mobileAppButton: CustomMenuItem = {
